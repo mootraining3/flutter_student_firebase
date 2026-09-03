@@ -1,7 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_student_firebase/pages/main_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // LOAD FIREBASE CONFIGURATION
+  await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 
